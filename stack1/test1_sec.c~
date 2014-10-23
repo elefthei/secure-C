@@ -1,0 +1,17 @@
+#include<string.h>
+#include<stdio.h>
+
+#define goodPass "Swordfish"
+#define STRSIZE 80
+int main() {
+  char passIsGood=0;
+  char buf[STRSIZE+1];
+
+  printf("Enter password:\n");
+  fgets(buf,STRSIZE,stdin);
+
+  if(strncmp(buf,goodPass,STRSIZE)==0)
+    passIsGood=1;
+  if (passIsGood == 1)
+    printf("You win!\n");
+}

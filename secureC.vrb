@@ -1,0 +1,16 @@
+\frametitle{\shield Compliant code}
+
+\begin{lstlisting}[style=cstyle]
+inline int f(int x) {
+   ++operations;
+   ++calls_to_f;
+   return 2*x;
+}
+inline int g(int x) {
+   ++operations;
+   ++calls_to_g;
+   return x + 1;
+}
+
+y = f(x) + g(x);
+\end{lstlisting}
